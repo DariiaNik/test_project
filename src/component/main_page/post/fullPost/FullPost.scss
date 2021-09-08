@@ -1,0 +1,25 @@
+.full-post-wrapper {
+  padding: 30px 60px;
+  margin: 30px auto;
+  width: 60%;
+
+  .full-post-title {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .full-post-body {
+    font-size: 22px;
+  }
+
+  .full-post-new-comment {
+    width: 80%;
+    margin: 70px auto;
+  }
+
+  .full-post-comments {
+    font-size: 18px;
+    margin: 20px auto 0;
+    width: 80%;
+  }
+}
