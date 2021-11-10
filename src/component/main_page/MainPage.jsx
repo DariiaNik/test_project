@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const MainPage = (props) => {
 
     let postElement = props.posts.map(post => (
-        <Post key={post.id} title={post.title} body={post.body} id={post.id} deletePost={props.deletePost}/>
+        <Post key={post._id} title={post.title} body={post.body} id={post._id} deletePost={props.deletePost}/>
     ))
 
     return (

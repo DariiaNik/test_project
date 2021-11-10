@@ -49,13 +49,13 @@ const mainReducer = (state = initialState, action) => {
         case DELETE_POST: {
             return {
                 ...state,
-                posts: state.posts.filter(post => post.id !== action.id)
+                posts: state.posts.filter(post => post._id !== action.id)
             };
         }
         case UPDATE_POST: {
             return {
                 ...state,
-                posts: state.posts.map(post => post.id === action.id
+                posts: state.posts.map(post => post._id === action.id
                     ? {title: action.title, body: action.body, ...post}
                     : post)
             }
@@ -76,7 +76,7 @@ export const getPostsTC = () => {
     return (dispatch) => {
         commonAPI.getPosts().then(response => {
             if (response.status === 200) {
-                dispatch(setPostsAC(response.data))
+                dispatch(setPostsAC(response.data.result))
             }
         })
     }
@@ -111,6 +111,7 @@ export const deletePostTC = (id) => {
 }
 export const updatePostTC = (id, title, body) => {
     return (dispatch) => {
+        console.log(id, title, body)
         commonAPI.updatePost(id, title, body)
         dispatch(updatePostAC(id, title, body))
     }

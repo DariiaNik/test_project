@@ -24,7 +24,7 @@ const Header = () => {
         <div className={'header-wrapper'}>
             <div className={'header-content'}>
                 <NavLink to={'/main'}>
-                    <div className={'header-title'}>My little blog</div>
+                    <div className={'header-title'}>My blog</div>
                 </NavLink>
                 <NavLink to={'/addNewPost'}>
                     <MyButton variant="outlined">New Post</MyButton>

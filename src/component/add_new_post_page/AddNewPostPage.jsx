@@ -55,7 +55,6 @@ const AddNewPostPage = (props) => {
             props.postNewArticle(titleValue, bodyValue)
             setTitleValue('');
             setBodyValue('');
-            console.log(titleValue, bodyValue)
         }
     }
 

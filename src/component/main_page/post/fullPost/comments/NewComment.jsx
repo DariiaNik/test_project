@@ -77,7 +77,7 @@ const NewComment = (props) => {
 
 
 NewComment.propTypes = {
-    postID:PropTypes.number,
+    postID:PropTypes.string,
     postNewComment:PropTypes.func
 
 }

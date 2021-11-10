@@ -51,12 +51,12 @@ const UpdatePost = (props) => {
 
     function handleEnter(event) {
         if (event.key === 'Enter' && titleValue !== '') {
-            props.updatePost(props.fullPost.id, titleValue, bodyValue)
+            props.updatePost(props.fullPost._id, titleValue, bodyValue)
         }
     }
 
     function handleClick() {
-        props.updatePost(props.fullPost.id, titleValue, bodyValue)
+        props.updatePost(props.fullPost._id, titleValue, bodyValue)
     }
 
     return (

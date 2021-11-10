@@ -18,7 +18,7 @@ class UpdatePostContainer extends React.Component {
     render() {
         let str = this.props.location.pathname;
         let id = str.slice(str.lastIndexOf('/') + 1);
-        if (this.props.fullPost.id === parseInt(id)) {
+        if (this.props.fullPost._id === id) {
             return (
                 <UpdatePost fullPost={this.props.fullPost} updatePost={this.props.updatePostTC}/>
             )

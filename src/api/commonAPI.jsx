@@ -2,7 +2,8 @@ import axios from "axios";
 
 const instance = axios.create({
     withCredentials: true,
-    baseURL: 'https://bloggy-api.herokuapp.com/',
+    baseURL: 'http://localhost:3000/',
+   /* baseURL: 'https://bloggy-api.herokuapp.com/',*/
 })
 
 export const commonAPI = {
@@ -14,15 +15,15 @@ export const commonAPI = {
             .catch(error => console.error(error))
     },
     getFullPost(id) {
-        return instance.get(`posts/${id}?_embed=comments`)
+        return instance.get(`post/?id=${id}`)
             .then(response => {
                 return response;
             })
             .catch(error => console.error(error))
 
     },
-    postNewComment(postId, text) {
-        instance.post('comments/', {"postId": postId, "body": text})
+    postNewComment(id, text) {
+        instance.post(`comments/?id=${id}`, { "body": text})
             .catch(error => console.error(error))
     },
     postNewArticle(title, body) {
@@ -30,10 +31,10 @@ export const commonAPI = {
             .catch(error => console.error(error))
     },
     deletePost(id) {
-        instance.delete(`posts/${id}`)
+        instance.delete(`posts/?id=${id}`)
             .catch(error => console.error(error))
     },
     updatePost(id, title, body) {
-        instance.put(`posts/${id}`, {title, body})
+        instance.put(`posts/?id=${id}`, {title, body})
     }
 }

@@ -4,7 +4,6 @@ import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
 
 const Post = (props) => {
-
     return (
         <div className={'post'}>
             <div className={'post-title'}>
@@ -35,7 +34,7 @@ const Post = (props) => {
 Post.propTypes = {
     title: PropTypes.string,
     body: PropTypes.string,
-    id: PropTypes.number,
+    id: PropTypes.string,
     deletePost: PropTypes.func
 
 }

@@ -8,6 +8,7 @@ You can view all posts, view a single post and its comments, leave comments. And
 ## Technologies
 * **react : 17.0.2**
 * **redux : 4.1.1**
+* **mongodb: 4.1.3**
 * **react-redux : 7.2.5**
 * **redux-thunk: 2.3.0**
 * **axios : 0.21.4**
